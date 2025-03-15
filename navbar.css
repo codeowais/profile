@@ -1,0 +1,33 @@
+.nav{
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    z-index: 4;
+}
+
+.nav span{
+    font-family: "medium";
+    padding-top: 0.5em;
+    font-size: 1.025rem;
+    color: var(--accent);
+    opacity: 0.5;
+    transition: opacity 200ms ease;
+}
+.nav span:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+
+    .nav{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1024px){
+
+    .nav{
+        padding-top: 18vh;
+    }
+}

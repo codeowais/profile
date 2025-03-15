@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="left-nav">
+        <div class="brand">
+            <p>Syed Owais</p>
+        </div>
+        <nav class="nav">
+            <span data-section="intro">Intro</span>
+            <span data-section="projects">Projects</span>
+            <span data-section="about">About</span>
+            <span data-section="contact">Contact</span>
+        </nav>
+        <dropdown></dropdown>
+    </div>
+    <div class="content">
+        <section class="intro" id="intro">
+            <h1>Hi I'm <font class="logo">Syed Owais</font>, a passionate designer and self-taught web developer, who loves books, cars, storytelling and videography.</h1>
+        </section>
+        <section class="projects" id="projects">
+            <center>
+            <a href="https://januartonline.github.io/profile"><img src="img/januart.png"></a>
+            <a href="https://codeowais.github.io/panacea-ai/"><img src="img/panacea.png"></a>
+            <a href="https://amriteshkr8.github.io/hyperef/index.html"><img src="img/codebreakers.png"></a>
+            <img src="img/elib.png">
+            </center>
+        </section>
+        <section class="about" id="about">
+            <div>
+                <h2>Accolades</h2>
+                <p>
+                    <b>Nav Yuvam</b><br>
+                    Project Model Display - Winner<br>
+                    Project: Panacea AI - An AI-Powered Medical Assistant<br>
+                    <a href="">View Award</a>
+                </p>
+                <p>
+                    <b>Technika 4.0</b><br>
+                    Project Model Display - Runner Up<br>
+                    Project: Panacea AI - An AI-Powered Medical Assistant<br>
+                    <a href="">View Award</a>
+                </p>
+            </div>
+            <div>
+                <h2>Education</h2>
+                <p><b>Matriculate</b><br>
+                Central Board of Secondary Education<br>
+                Roll no: 22298246</p>
+            </div>
+        </section>
+        <section class="credits">
+            <h3>Marginalia & Musings</h3><br>
+            Design and Code by <a href="https://codeowais.github.io/profile">Syed Owais</a><br>
+            Typeset Gmarket Sans by <a href="https://corp.gmarket.com/fonts/">corp.gmarket.com</a><br>
+            Inspired by <a href="https://billysweeney.com">Billy Sweeney</a>
+
+        </section>
+        <section class="contact" id="contact">
+            <h2>Let's turn ideas into pixels. Say Hello!</h2>
+            Website: <a href="codeowais.github.io/profile">codeowais.github.io/profile</a><br>
+            Email: <a href="mailto:syedowais2007@gmail.com?subject=Enquiry from Website">syedowais2007@gmail.com</a><br>
+            Github: <a href="https://github.com/codeowais">codeowais</a><br>
+            Instagram: <a href="https://instagram.com/mintcrystal_450">@mintcrystal_450</a><br>
+            Discord: mintcrystal_450<br>
+            <img src="img/IMG_0115.JPG">
+        </section>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const navSpans = document.querySelectorAll(".nav span");
+
+  // Intersection Observer for highlighting
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navSpans.forEach((span) => span.style.opacity = "0.5");
+          document.querySelector(`.nav span[data-section="${entry.target.id}"]`).style.opacity = "1";
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  // Click event for smooth scrolling
+  navSpans.forEach((span) => {
+    span.addEventListener("click", function () {
+      const targetId = span.getAttribute("data-section");
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+});
+    </script>
+</body>
+</html>
