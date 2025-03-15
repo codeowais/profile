@@ -155,7 +155,7 @@ body{
         flex-direction: column;
     }
     .about div{
-        width: 100%;
+        width: 100vw;
         height: auto;
     }
 }
