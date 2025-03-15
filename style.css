@@ -154,6 +154,10 @@ body{
     .about{
         flex-direction: column;
     }
+    .about div{
+        width: 100%;
+        height: auto;
+    }
 }
 @media only screen and (max-width: 1024px){
 
