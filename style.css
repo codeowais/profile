@@ -125,7 +125,7 @@ body{
 .contact{
     line-height: 1.5;
     color: var(--accent);
-    padding-bottom: 4vh;
+    padding-bottom: 5vh;
 }
 .contact img{
     width: 35vw;
