@@ -157,6 +157,9 @@ body{
     .about div{
         width: 100%;
     }
+    .contact img{
+        padding-bottom: 40px;
+    }
 }
 @media only screen and (max-width: 1024px){
 
@@ -165,7 +168,8 @@ body{
     }
     .contact img{
         right: 0;
-        bottom: -10vh;
+        bottom: -2vh;
         width: 100%;
+        padding-bottom: 40px;
     }
 }
