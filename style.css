@@ -125,7 +125,7 @@ body{
 .contact{
     line-height: 1.5;
     color: var(--accent);
-    padding-bottom: 0;
+    padding-bottom: 40px;
 }
 .contact img{
     width: 35vw;
@@ -157,10 +157,6 @@ body{
     .about div{
         width: 100%;
     }
-    .contact img{
-        padding-bottom: 40px;
-        margin-bottom: 40px;
-    }
 }
 @media only screen and (max-width: 1024px){
 
@@ -171,6 +167,5 @@ body{
         right: 0;
         bottom: -2vh;
         width: 100%;
-        padding-bottom: 40px;
     }
 }
