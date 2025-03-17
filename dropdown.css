@@ -14,15 +14,15 @@
     -webkit-backdrop-filter: blur(8px);
     overflow: hidden;
     transition: width 200ms ease;
-    gap: 26px;
+    gap: 25.5px;
     z-index: 5;
 }
 .dropdown:hover {
-    width: 361.5px;
+    width: 370.5px;
 }
 .dot {
-    width: 7px;
-    height: 7px;
+    width: 9px;
+    height: 9px;
     margin: 8px 0;
     background-color: var(--accent);
     opacity: 0.5;
