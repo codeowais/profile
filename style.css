@@ -84,11 +84,24 @@ body{
     height: 100%;
     padding-bottom: 40px;
 }
-.projects img{
+.projects img {
+    display: inline-block;
     width: 33vw;
     height: auto;
 }
+
+.projects > a:nth-child(-n+3) img,
+.projects > img:nth-child(-n+3) {
+    vertical-align: baseline !important;
+}
+
+.projects > a:nth-last-child(-n+2) img,
+.projects > img:nth-last-child(-n+2) {
+    vertical-align: top !important;
+}	
+
 .projects{
+    text-align: center;
     padding-bottom: 20vh;
 }
 
@@ -125,7 +138,7 @@ body{
 .contact{
     line-height: 1.5;
     color: var(--accent);
-    padding-bottom: 5vh;
+    padding-bottom: 0;
 }
 .contact img{
     width: 35vw;
@@ -133,7 +146,13 @@ body{
     position: relative;
     right: -40vw;
     bottom: 20vh;
+    margin-bottom: 20px;
     z-index: -1;
+}
+
+.contact img{
+    background-color: var(--accent);
+    mix-blend-mode:lighten;
 }
 
 @media only screen and (max-width: 600px){
