@@ -14,7 +14,36 @@
     <link rel="icon" type="image/png" href="img/favicon.ico">
     <title>Syed Owais — Designer & Web Developer</title>
 </head>
+<style>
+  #logo-overlay{
+    width: 100vw;
+	  height: 100vh;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  background: #000;
+    	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  z-index: 10;
+  }
+  #logo{
+	  width: 40vw;
+	  height: auto;
+  }
+  @media only screen and (max-width: 600px){
+    #logo{
+	width: 70vw;
+	height: auto;
+    }
+  }
+</style>
 <body>
+    <div id="logo-overlay">
+      <video id="logo" muted autoplay>
+        <source src="name.webm" type="video/webm">
+      </video>
+    </div>
     <div class="left-nav">
         <div class="brand">
             <p>Syed Owais</p>
@@ -123,5 +152,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
     </script>
     <script src="colors.js"></script>
+    <script src="fade.js"></script>
+    <script>
+	    const overlay = document.getElementById("logo-overlay");
+	    document.addEventListener("DOMContentLoaded", function(){
+		    console.log("DOMContent Loaded");
+		    document.getElementById("logo").onended = function(){
+			    console.log("fadeOut animation kicked");
+			    fadeOut(overlay, 500, function(){
+				    console.log("fadeOut animation completed");
+			    })
+		    }
+	    });
+  </script>
 </body>
 </html>
