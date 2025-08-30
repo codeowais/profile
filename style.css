@@ -71,9 +71,9 @@ body{
     padding-top: 22.5vh;
 }
 .intro, .about, .contact{
-    padding-left: 235px;
+    margin-left: 270px;
     padding-bottom: 22.5vh;
-    padding-right: 100px;
+    margin-right: 100px;
     font-family: "medium";
 }
 .about{
@@ -121,7 +121,7 @@ body{
     padding-bottom: 2.5vh;
 }
 .credits{
-    padding-left: 235px;   
+    margin-left: 270px;   
     font-family: "medium"; 
     font-size: 1.025rem;
     line-height: 1.5;
@@ -139,22 +139,30 @@ body{
     line-height: 1.5;
     color: var(--accent);
     padding-bottom: 0;
+    margin-right: 100px;
+}
+.contact div{
+    display: flex;
+    padding-bottom: 5vh;
 }
 .contact img{
-    width: 35vw;
+    width: 45%;
     height: auto;
-    position: relative;
     right: -40vw;
     bottom: 20vh;
+    margin-top: 0.7em;
     margin-bottom: 20px;
     z-index: -1;
+}
+.contact p{
+    width: 50%;
 }
 
 @media only screen and (max-width: 600px){
 
     .intro, .about, .contact, .credits{
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .intro h1{
         font-size: 8vw;
@@ -171,6 +179,9 @@ body{
     .about div{
         width: 100%;
     }
+    .credits{
+        padding-bottom: 10vh;
+    }
 }
 @media only screen and (max-width: 1024px){
 
@@ -178,8 +189,13 @@ body{
         padding-bottom: 32.5vh;
     }
     .contact img{
-        right: 0;
-        bottom: -2vh;
         width: 100%;
     }
+    .contact div{
+        flex-direction: column;
+    }
+    .contact p{
+        width: 100%;
+    }
+
 }
